@@ -68,7 +68,7 @@ tests/               # pytest-asyncio + httpx AsyncClient test suite
 <!-- 📸 Add a screenshot of the Supabase schema diagram here -->
 > _Screenshot from Supabase schema visualizer — shows the four main tables and their relationships_
 
-![Supabase Schema Diagram](./supabase_schema.png)
+![Supabase Schema Diagram](./resources/db.png)
 
 The four main tables:
 
