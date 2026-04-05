@@ -1,7 +1,10 @@
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
+from sqlalchemy import select
 
-from app.database import engine
+from app.database import engine, get_db
+from app.models.user import User
+from sqlalchemy.ext.asyncio import AsyncSession
 
 router = APIRouter()
 
@@ -20,3 +23,14 @@ async def ready():
         return {"status": "ready", "database": "connected"}
     except Exception:
         return JSONResponse(status_code=503, content={"status": "not ready", "database": "unreachable"})
+
+
+@router.post("/seed", description="Seed database with sample data")
+async def seed_database():
+    # Import and run seed script
+    try:
+        from seed import seed
+        await seed()
+        return {"message": "Database seeded successfully", "status": "completed"}
+    except Exception as e:
+        return {"message": f"Seeding failed: {str(e)}", "status": "error"}
