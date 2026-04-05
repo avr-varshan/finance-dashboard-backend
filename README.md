@@ -1,7 +1,6 @@
-# Finance Dashboard Backend
 
 > **Live API:** https://finance-dashboard-backend-2-rvrc.onrender.com  
-> **Interactive Docs:** https://finance-dashboard-backend-2-rvrc.onrender.com/docs  
+> **Interactive Docs:** https://finance-dashboard-backend-2-rvrc.onrender.com/docs#  
 > **Database:** Supabase (PostgreSQL)
 
 ---
