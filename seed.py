@@ -24,9 +24,9 @@ async def seed():
 
         users = []
         for u in [
-            ("admin@zorvyn.io", "Admin@123!", "Admin User", Role.admin),
-            ("analyst@zorvyn.io", "Analyst@123!", "Analyst User", Role.analyst),
-            ("viewer@zorvyn.io", "Viewer@123!", "Viewer User", Role.viewer),
+            ("admin@zorvyn.io", "Admin123!", "Admin User", Role.admin),
+            ("analyst@zorvyn.io", "Analyst123!", "Analyst User", Role.analyst),
+            ("viewer@zorvyn.io", "Viewer123!", "Viewer User", Role.viewer),
         ]:
             user = User(email=u[0], full_name=u[2], hashed_password=get_password_hash(u[1]), role=u[3])
             session.add(user)
